@@ -1,6 +1,6 @@
 <template>
     <v-card  class="mx-auto my-12" max-width="374">
-      About me
+      My projects view
     </v-card>
 </template>
 

@@ -1,7 +1,9 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/home.vue'
-import ContactmeView from '@/views/contactme.vue'
+import HomeView from '@/views/Home.vue'
+import ContactmeView from '@/views/Contactme.vue'
+import AboutmeView from '@/components/Aboutme.vue'
+import MyprojectsView from '@/views/Myprojects.vue'
 
 const routes = [
   
@@ -14,6 +16,16 @@ const routes = [
         path: '/contactme',
         name: 'Contactme',
         component: ContactmeView,
+      },
+      {
+        path: '/aboutme',
+        name: 'Aboutme',
+        component: AboutmeView,
+      },
+      {
+        path: '/myprojects',
+        name: 'Myprojects',
+        component: MyprojectsView,
       },
     ]
 

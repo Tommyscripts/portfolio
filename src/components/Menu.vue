@@ -6,13 +6,13 @@
         mdi-home-account
       </v-icon>
     </v-btn>
-    <v-btn color="#009688" class="ma-2 white--text" @click="">
+    <v-btn color="#009688" class="ma-2 white--text" :to="{ name: 'Aboutme' }">
       About me
       <v-icon right dark>
         mdi-account
       </v-icon>
     </v-btn>
-    <v-btn color="#009688" class="ma-2 white--text" @click="">
+    <v-btn color="#009688" class="ma-2 white--text" :to="{ name: 'Myprojects' }">
       My projects
       <v-icon right dark>
         mdi-briefcase-account
