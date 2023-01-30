@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # base
 
 ## Project setup
@@ -56,6 +55,3 @@ pnpm lint
 ### Customize configuration
 
 See [Configuration Reference](https://vitejs.dev/config/).
-=======
-# portfolio
->>>>>>> 927537b6409b0cf50f8673d3a688a28cfa2c8ed0
