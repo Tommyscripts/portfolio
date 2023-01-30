@@ -1,5 +1,5 @@
 <template>
-  <v-footer id="footer" v-bind="localAttrs" :padless="padless">
+  <v-footer id="footer" padless app>
     <v-card flat tile width="100%" class="red lighten-1 text-center">
       <v-card
         flat
