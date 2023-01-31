@@ -1,6 +1,6 @@
-<template>
+<template >
   <v-app>
-    <v-main>
+    <v-main >
       <v-container>
         <v-row no-gutters>
           <v-col order="last">

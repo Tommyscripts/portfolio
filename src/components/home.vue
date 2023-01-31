@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container  >
     <v-row no-gutters>
       <v-col order="last">
         <v-img cover height="250" src="../img/me.jpg"></v-img>
