@@ -1,5 +1,5 @@
 <template >
-  <v-app>
+  <v-app >
     <v-main >
       <v-container>
         <v-row no-gutters>
@@ -13,7 +13,7 @@
               </v-col>
             </v-row>
           </v-col>
-          <v-col order="first">
+          <v-col  order="first">
             <Menu />
           </v-col>
         </v-row>
@@ -41,3 +41,17 @@ export default {
   },
 };
 </script>
+<script>
+
+</script>
+<style>
+main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10;
+    left:10;
+    background: url( 'https://cdn.pixabay.com/photo/2016/03/26/13/09/organic-1280537_1280.jpg') no-repeat center center;
+    background-size:cover;
+  }
+</style>

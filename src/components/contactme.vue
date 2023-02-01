@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card :loading="loading" class="mx-auto my-12" max-width="374">
+    <v-card id="fondo" :loading="loading" class="mx-auto my-12" max-width="374">
       Testing Contactme View
     </v-card>
   </div>
