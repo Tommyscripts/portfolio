@@ -5,8 +5,5 @@
 </template>
 
 <style>
-.fondo{
-  background-color: black;
-}
 
 </style>

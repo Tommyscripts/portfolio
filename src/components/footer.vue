@@ -65,7 +65,6 @@ export default {
   padding-top: .5rem;
   width: 100%;
   height:fit-content;
-  /* min-height: 30px; */
   flex-shrink: 0;
 }
 @media(min-width: 900px) {
