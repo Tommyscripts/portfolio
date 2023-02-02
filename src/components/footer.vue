@@ -7,7 +7,7 @@
         class="indigo lighten-1 white--text justify-center"
         color="#009688">
         <v-card-text class="center">
-          <v-btn color="#000000">
+          <v-btn color="light-blue darken-1">
             <a
               href="https://www.linkedin.com/in/javierescoz/"
               class="amber--text text--darken-1 ml-4">
@@ -15,7 +15,7 @@
                 mdi-linkedin
               </v-icon></a>
           </v-btn>
-          <v-btn color="#000000">
+          <v-btn color="light-blue darken-1">
             <a
               href="https://github.com/Tommyscripts"
               class="amber--text text--darken-1 ml-4">

@@ -2,24 +2,25 @@
   <v-app >
     <v-main >
       <v-container>
-        <v-row no-gutters>
+        <v-row class="caja" no-gutters>
           <v-col order="last">
             <v-img cover height="250" src="../img/me.jpg"></v-img>
           </v-col>
           <v-col>
             <v-row
-              ><v-col cols="12">
+            class="caja"
+              ><v-col  cols="12">
                 <RouterView />
               </v-col>
             </v-row>
           </v-col>
-          <v-col  order="first">
+          <v-col class="caja"  order="first">
             <Menu />
           </v-col>
         </v-row>
       </v-container>
       <v-row>
-        <v-col cols="12">
+        <v-col  cols="12">
           <Footer />
         </v-col>
       </v-row>
@@ -54,4 +55,13 @@ main {
     background: url( 'https://cdn.pixabay.com/photo/2016/03/26/13/09/organic-1280537_1280.jpg') no-repeat center center;
     background-size:cover;
   }
+.caja{
+  
+    margin-right: -4px;
+    vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+    overflow: hidden;
+}
 </style>
