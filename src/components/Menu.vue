@@ -10,7 +10,7 @@
         <v-row align="center" justify="center">
           <v-btn
             class="ma-2 white--text justify-space-around"
-            color="black"
+            color="light-blue darken-1"
             dark
             @click.stop="drawer = !drawer"
           >
@@ -25,7 +25,7 @@
           <v-list>
             <v-btn
               class="ma-2 white--text justify-space-around"
-              color="black"
+              color="light-blue darken-1"
               :to="{ name: 'Home' }"
             >
               Home
@@ -35,7 +35,7 @@
           <v-list>
             <v-btn
               class="ma-2 white--text justify-space-around"
-              color="black"
+              color="light-blue darken-1"
               :to="{ name: 'Aboutme' }"
             >
               About me
@@ -45,7 +45,7 @@
           <v-list>
             <v-btn
               class="ma-2 white--text justify-space-around"
-              color="black"
+              color="light-blue darken-1"
               :to="{ name: 'Myprojects' }"
             >
               My projects
@@ -55,7 +55,7 @@
           <v-list>
             <v-btn
               class="ma-2 white--text justify-space-around"
-              color="black"
+              color="light-blue darken-1"
               :to="{ name: 'Contactme' }"
             >
               Contact me
@@ -85,7 +85,7 @@ export default {
 #ocultar {
   background-color: rgba(255, 255, 255, 0);
   width: auto;
-  height: 17em;
+  padding-right: 100rem;
 }
 #prueba {
   background-color: rgba(126, 183, 239, 0.566);
