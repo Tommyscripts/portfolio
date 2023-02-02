@@ -57,7 +57,7 @@ export default {
 </script>
 <style>
 #footer {
-  background-color: rgb(224, 237, 243);
+  background-color: #009688;
   color: rgb(43, 39, 39);
   display: flex;
   flex-direction: column;
@@ -65,7 +65,6 @@ export default {
   padding-top: .5rem;
   width: 100%;
   height:fit-content;
-  /* min-height: 30px; */
   flex-shrink: 0;
 }
 @media(min-width: 900px) {
@@ -73,6 +72,9 @@ export default {
     flex-direction: row;
     justify-content: space-around;
     text-align: justify;
+    height: auto;
+    width: 100%;
+    background-size: cover;
   }
 }
 </style>

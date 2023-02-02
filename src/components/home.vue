@@ -1,15 +1,15 @@
 <template>
-  <v-container>
-    <v-row no-gutters>
+  <v-container class="mx-auto my-5">
+    <v-row id="fondo"  no-gutters>
       <v-col order="last">
         <v-img cover height="250" src="../img/me.jpg"></v-img>
       </v-col>
       <v-col>
-        <v-card-item>
+        <v-card-item >
           <v-card-title>Javier Cabrera Escoz</v-card-title>
         </v-card-item>
         <v-card-text>
-          <div>
+          <div >
             Siempre me ha llamado la atención la tecnología y la informática,
             por cosas de la vida nunca pude dedicarme ni aprender a programar,
             debido a esto unos meses antes de la pandemia decidi hacer un curso
@@ -26,9 +26,13 @@
       </v-col>
     </v-row>
   </v-container>
-  <v-divider class="mx-4 mb-1"></v-divider>
 </template>
 
 <script>
 export default {};
 </script>
+<style>
+#fondo{
+  background-color: rgba(126, 183, 239, 0.566);
+}
+</style>
