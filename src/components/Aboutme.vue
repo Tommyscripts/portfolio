@@ -35,8 +35,8 @@
         color="light-blue darken-1"
         elevation="2"
         rel="pdf"
-        href="@/files/JAVIER_CV.pdf"
-        download="JAVIER_CV.pdf">
+        href="../../public/JAVIER_CV.pdf"
+        download="">
         click
         </v-btn>
       </v-card-text>
