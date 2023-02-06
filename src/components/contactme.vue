@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card class="mx-auto" max-width="500">
+    <v-card class="mx-auto my-7" max-width="500">
       <v-card-item class="bg-cyan-darken-1">
         <v-card-title>
           <span class="text-h5">Javier Cabrera</span>
@@ -44,7 +44,7 @@
       </v-list>
 
       <v-form
-        action="https://formsubmit.co/dark.angel.alhue@gmail.com"
+        action="https://formsubmit.co/e78cf6db1dea690a57f2f966583aceff"
         method="POST"
       >
         <v-label for="Nombre">Nombre</v-label>
@@ -72,7 +72,7 @@
           placeholder="Puede clickar en el correo para mandarme un email, o rellenar este campo y darle al boton enviar. Además de tener mi github y mi linkedin."
           variant="outlined"
         ></v-textarea>
-        <v-btn type="submit" value="enviar" color="light-blue darken-1">Enviar</v-btn>
+        <v-btn  type="submit" value="enviar" color="light-blue darken-1">Enviar</v-btn>
         <input type="hidden" name="_next" value="http://localhost:3000/" />
         <input type="hidden" name="_captcha" value="false" />
       </v-form>
