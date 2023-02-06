@@ -4,7 +4,7 @@
       height="400"
       class="mx-auto my-9 overflow-hidden"
       style="position: relative"
-      id="prueba"
+      id="menu2"
     >
       <v-container class="fill-height">
         <v-row align="center" justify="center">
@@ -89,5 +89,8 @@ export default {
 }
 #prueba {
   background-color: rgba(126, 183, 239, 0.566);
+}
+#menu2{
+  background-color: rgba(95, 158, 160, 0);
 }
 </style>
