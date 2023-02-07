@@ -11,7 +11,7 @@
               v-bind="props"
             >
               <v-img
-                src="https://picsum.photos/350/165?random"
+                src="@/img/arrow hero.jpg"
                 height="125"
                 cover
                 class="bg-grey-lighten-2"
@@ -42,7 +42,7 @@
               v-bind="props"
             >
               <v-img
-                src="https://picsum.photos/350/165?random"
+                src="@/img/hotelerio.jpg"
                 height="125"
                 cover
                 class="bg-grey-lighten-2"
@@ -76,7 +76,7 @@
               v-bind="props"
             >
               <v-img
-                src="https://picsum.photos/350/165?random"
+                src="@/img/burguerqueen.jpg"
                 height="125"
                 cover
                 class="bg-grey-lighten-2"
@@ -87,9 +87,10 @@
                     class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal"
                     style="height: 100%"
                   >
-                    Este fue nuestro ultimo proyecto, durante 3 semanas, 1 semana para figma,
-                    primera parte del proyecto la dedicamos al backend y la segunda parte, para el frontend,
-                    el cual creamos con vue2.
+                    Burguer Queen es una app, donde podras ver las 
+                    hamburguesas canarias, y ademas votar por tu favorita.
+                    Al visitar la página el backend tarda un poco en "despertar".
+                    
                   </div>
                 </v-expand-transition>
               </v-img>
@@ -142,7 +143,7 @@
   background-color: rgba(126, 183, 239, 0.566);
 }
 .v-card--reveal {
-  font-size: 1em;
+  font-size: 0.8em;
   align-items: center;
   bottom: 0;
   justify-content: center;
