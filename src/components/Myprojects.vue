@@ -9,6 +9,8 @@
               color="grey-lighten-4"
               max-width="600"
               v-bind="props"
+              href="https://tommyscripts.github.io/ArrowHero/"
+              target="_blank"
             >
               <v-img
                 src="@/img/arrow hero.jpg"
@@ -74,6 +76,8 @@
               color="grey-lighten-4"
               max-width="600"
               v-bind="props"
+              href="https://burgerqueens.netlify.app/"
+              target="_blank"
             >
               <v-img
                 src="@/img/burguerqueen.jpg"

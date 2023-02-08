@@ -10,7 +10,8 @@
           <v-btn color="light-blue darken-1">
             <a
               href="https://www.linkedin.com/in/javierescoz/"
-              class="amber--text text--darken-1 ml-4">
+              class="amber--text text--darken-1 ml-4"
+              target="_blank">
               <v-icon size="24px" id="text" color="#E53935" dark rounded>
                 mdi-linkedin
               </v-icon></a>
@@ -18,7 +19,8 @@
           <v-btn color="light-blue darken-1">
             <a
               href="https://github.com/Tommyscripts"
-              class="amber--text text--darken-1 ml-4">
+              class="amber--text text--darken-1 ml-4"
+              target="_blank">
               <v-icon size="24px" id="text" color="#E53935" dark rounded>
                 mdi-github</v-icon>
             </a>
