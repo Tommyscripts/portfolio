@@ -121,10 +121,7 @@
                     class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal"
                     style="height: 100%"
                   >
-                   Esta aplicación nacio de una idea que tuve para el último proyecto del bootcamp, pero debido al poco tiempo
-                   que se nos daba para la realización de este, no era viable. Trata de una lista de productos que tenemos en casa,
-                   una vez los consumismos, los añadimos a una lista, "lista de la compra" de esta manera al realizar nuestras compras,
-                   podemos ahorrar no comprando productos de mas.
+                   En proceso.
                   </div>
                 </v-expand-transition>
         </v-img>
