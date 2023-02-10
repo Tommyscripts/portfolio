@@ -32,12 +32,14 @@
         <v-list-item
           prepend-icon="mdi-linkedin"
           href="https://www.linkedin.com/in/javierescoz/"
+          target="_blank"
         >
           Linkedin
         </v-list-item>
         <v-list-item
           prepend-icon="mdi-github"
           href="https://github.com/Tommyscripts"
+          target="_blank"
         >
           Github
         </v-list-item>
@@ -73,7 +75,7 @@
           variant="outlined"
         ></v-textarea>
         <v-btn  type="submit" value="enviar" color="light-blue darken-1">Enviar</v-btn>
-        <input type="hidden" name="_next" value="http://localhost:3000/" />
+        <input type="hidden" name="_next" value="https://javiercabreraescoz.netlify.app/" />
         <input type="hidden" name="_captcha" value="false" />
       </v-form>
     </v-card>
