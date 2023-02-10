@@ -13,7 +13,7 @@
               target="_blank"
             >
               <v-img
-                src="@/img/arrow hero.jpg"
+                src="@/img/arrowhero.jpg"
                 height="125"
                 cover
                 class="bg-grey-lighten-2"
