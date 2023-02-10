@@ -51,7 +51,7 @@ main {
     position: absolute;
     top: 10;
     left:10;
-    background: url( 'https://cdn.pixabay.com/photo/2016/03/26/13/09/organic-1280537_1280.jpg') no-repeat center center;
+    background: url( '@/img/organic-1280537_1280.jpg') no-repeat center center;
     background-size:cover;
   }
 .caja{
