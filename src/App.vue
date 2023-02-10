@@ -4,7 +4,6 @@
       <v-container>
         <v-row class="caja" no-gutters>
           <v-col order="last">
-            <v-img cover height="250" src="../img/me.jpg"></v-img>
           </v-col>
           <v-col>
             <v-row
