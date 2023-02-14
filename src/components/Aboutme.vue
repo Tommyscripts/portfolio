@@ -36,7 +36,7 @@
         elevation="2"
         rel="pdf"
         href="../../public/JAVIER_CV.pdf"
-        download="JavierCV">
+        download="JavierCV.pdf">
         click
         </v-btn>
       </v-card-text>
