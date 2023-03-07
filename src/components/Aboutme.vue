@@ -35,7 +35,7 @@
         color="light-blue darken-1"
         elevation="2"
         rel="pdf"
-        href="../../public/JAVIER_CV.pdf"
+        href="../../public/JAVIERCV.pdf"
         download="JavierCV.pdf">
         click
         </v-btn>
