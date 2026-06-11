@@ -5,11 +5,26 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+html {
+  background-color: #000000;
+  height: 100%;
+}
 
-  @media (prefers-color-scheme: dark) {
+body {
+  @apply min-h-screen;
+  background: transparent;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Antes usábamos pseudo-elementos CSS para las estrellas.
+   Ahora usamos tsParticles; eliminamos las capas estáticas para evitar duplicados. */
+
+@media (prefers-color-scheme: dark) {
+  html {
     color-scheme: dark;
   }
 }
