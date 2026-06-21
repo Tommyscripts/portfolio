@@ -23,6 +23,7 @@ const defaultProjects: Project[] = [
   {
     id: "DiscordBot",
     title: "Discord Bot",
+    image: "../media/DiscordBot.png",
     subtitle: "He creado un bot para Discord en codigo Python, con el tiempo he añadido varios juegos, sistema de moderación, google Translate, y muchas cosas más. Con el tiempo ire añadiendo más cosas que tengo en mente, y que se me ocurran. Nota: Al clickar en Demo, clickaras en el enlace para invitar al bot en tu servidor.",
     // sin demo para probar boton condicional
     demoUrl: "https://discord.com/oauth2/authorize?client_id=1424779352008298537&scope=bot%20applications.commands&permissions=3941734153713728",
