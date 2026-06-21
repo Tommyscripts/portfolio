@@ -2,6 +2,7 @@ import React from "react";
 import ParticlesBg from "./ParticlesBg";
 import Cabecera from "./Cabecera";
 import SobreMi from "./SobreMi";
+import MisStack from "./MisStack";
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 py-6">
           <Cabecera />
           <SobreMi />
+          <MisStack />
         </div>
       </main>
     </div>
