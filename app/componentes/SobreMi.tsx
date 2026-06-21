@@ -40,42 +40,42 @@ const SobreMi: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4">
         {/* Título con líneas laterales pequeñas */}
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-12 h-[2px] bg-cyan-400/90 rounded" />
-          <h2 className="text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-semibold">Sobre Mí</h2>
-          <div className="w-12 h-[2px] bg-cyan-400/90 rounded" />
+          <div className="w-8 sm:w-10 h-[2px] bg-cyan-400/90 rounded" />
+          <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-semibold">Sobre Mí</h2>
+          <div className="w-8 sm:w-10 h-[2px] bg-cyan-400/90 rounded" />
         </div>
 
         {/* Contenido sin fondo ni borde (transparente) */}
         <div className="rounded-lg p-0">
-          <div className="p-6 flex flex-col md:flex-row items-center gap-6">
+          <div className="p-4 sm:p-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
             {/* Avatar (sin borde ni fondo) */}
             <div className="flex-shrink-0">
-              <div className="w-44 h-44 rounded-sm flex items-center justify-center overflow-hidden">
+              <div className="w-28 sm:w-36 md:w-44 h-28 sm:h-36 md:h-44 rounded-sm flex items-center justify-center overflow-hidden">
                 <div className="w-full h-full flex items-center justify-center bg-transparent">
-                  <UserIcon className="w-28 h-28" />
+                  <UserIcon className="w-20 sm:w-24 md:w-28 h-auto" />
                 </div>
               </div>
             </div>
 
             {/* Contenido */}
             <div className="flex-1">
-              <h3 className="text-lg md:text-xl font-bold text-white">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-white">
                 Programador full stack <span className="font-normal italic">obsesionado con el diseño oscuro</span>
               </h3>
-              <p className="mt-2 text-slate-300">el rendimiento y las experiencias que se sienten vivas.</p>
+              <p className="mt-2 text-sm sm:text-base text-slate-300">el rendimiento y las experiencias que se sienten vivas.</p>
 
               {/* Iconos de tecnologías (sin etiqueta) */}
-              <div className="mt-4 flex items-center gap-3">
+              <div className="mt-3 flex flex-wrap items-center gap-2">
                 {techIcons.map((t) => (
                   <div
                     key={t.name}
-                    className="w-12 h-12 rounded-md flex items-center justify-center"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-md flex items-center justify-center"
                     title={t.name}
                   >
                     <img
                       src={t.src}
                       alt={t.name}
-                      className="w-7 h-7 object-contain"
+                      className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
                       loading="lazy"
                       onError={(e) => {
                         const img = e.currentTarget as HTMLImageElement;
