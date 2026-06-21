@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 type Project = {
   id: string | number;
@@ -13,18 +13,12 @@ const placeholderBg = "linear-gradient(135deg,#0b1220 0%, #0f1724 100%)";
 
 const defaultProjects: Project[] = [
   {
-    id: "shadow-blog",
-    title: "Shadow Blog",
-    subtitle: "Blog de tecnología",
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: "nightwatch",
-    title: "Nightwatch",
-    subtitle: "Plataforma de monitoreo",
-    demoUrl: "#",
-    githubUrl: "#",
+    id: "ArrowHero",
+    title: "Arrow Hero",
+    image: "../media/ArrowHero.png",
+    subtitle: "En mis comienzos con JS vanilla, hice un juego para navegador totalmente vanilla, ArrowHero, un juego de habilidad y reflejos, donde el jugador debe esquivar flechas que caen del cielo. El juego tiene un sistema de puntuación y niveles de dificultad.",
+    demoUrl: "https://thriving-blini-b83168.netlify.app/",
+    githubUrl: "https://github.com/Tommyscripts/ArrowHero",
   },
   {
     id: "DiscordBot",
@@ -36,6 +30,8 @@ const defaultProjects: Project[] = [
   },
 ];
 
+// Nota: cargamos imágenes desde `app/media` de forma asíncrona usando `import.meta.glob`
+
 const chunkArray = <T,>(arr: T[], size: number): T[][] => {
   const chunks: T[][] = [];
   for (let i = 0; i < arr.length; i += size) chunks.push(arr.slice(i, i + size));
@@ -44,6 +40,37 @@ const chunkArray = <T,>(arr: T[], size: number): T[][] => {
 
 const MisProyectos: React.FC<{ items?: Project[] }> = ({ items = defaultProjects }) => {
   const rows = chunkArray(items, 3);
+
+  const [mediaMap, setMediaMap] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const modules = import.meta.glob('../media/*.{png,jpg,jpeg,webp,svg}');
+    const entries = Object.entries(modules) as [string, () => Promise<{ default: string }>][];
+    Promise.all(
+      entries.map(async ([path, loader]) => {
+        try {
+          const mod = await loader();
+          const name = path.split('/').pop()?.toLowerCase() || path;
+          return [name, mod.default] as [string, string];
+        } catch (e) {
+          return [path, ""] as [string, string];
+        }
+      })
+    ).then((pairs) => {
+      const map: Record<string, string> = {};
+      pairs.forEach(([k, v]) => {
+        if (v) map[k] = v;
+      });
+      setMediaMap(map);
+    });
+  }, []);
+
+  const resolveImage = (img?: string) => {
+    if (!img) return undefined;
+    if (img.startsWith('/')) return img;
+    const key = img.split('/').pop()?.toLowerCase() || img.toLowerCase();
+    return mediaMap[key];
+  };
 
   return (
     <section className="my-12">
@@ -61,26 +88,32 @@ const MisProyectos: React.FC<{ items?: Project[] }> = ({ items = defaultProjects
                 {row.map((p) => (
                   <article key={p.id} className="bg-slate-900/60 rounded-md border border-white/5 overflow-hidden shadow-sm">
                     <div className="aspect-[16/9] w-full bg-slate-800/30 flex items-center justify-center" style={{ background: p.image ? undefined : placeholderBg }}>
-                      {p.image ? (
-                        // si se pasa imagen, la usamos
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={p.image}
-                          alt={p.title}
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                          onError={(e) => {
-                            const img = e.currentTarget as HTMLImageElement;
-                            img.onerror = null;
-                            img.style.display = "none";
-                          }}
-                        />
-                      ) : (
+                      {(() => {
+                        const imgSrc = resolveImage(p.image);
+                        if (imgSrc) {
+                          return (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={imgSrc}
+                              alt={p.title}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                              onError={(e) => {
+                                const img = e.currentTarget as HTMLImageElement;
+                                img.onerror = null;
+                                img.style.display = "none";
+                              }}
+                            />
+                          );
+                        }
+
+                        return (
                         <div className="p-4 text-center">
                           <div className="text-slate-200 font-semibold">{p.title}</div>
                           <div className="text-xs text-slate-400 mt-1">Preview</div>
                         </div>
-                      )}
+                        );
+                      })()}
                     </div>
 
                     <div className="p-4 flex flex-col gap-3">
