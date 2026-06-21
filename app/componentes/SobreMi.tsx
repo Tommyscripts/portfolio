@@ -1,13 +1,17 @@
 import React from "react";
 
 const techIcons = [
-  { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "TypeScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-  { name: "JavaScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "Node.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  // Tailwind: usar raw github como alternativa y fallback en caso de error
-  { name: "Tailwind", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" },
-  { name: "Python", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "React", src: "/icons/react.svg" },
+  { name: "TypeScript", src: "/icons/typescript.svg" },
+  { name: "JavaScript", src: "/icons/javascript.svg" },
+  { name: "Node.js", src: "/icons/nodejs.svg" },
+  { name: "Tailwind", src: "/icons/tailwindcss.svg" },
+  { name: "Python", src: "/icons/python.svg" },
+  { name: "PHP", src: "/icons/php.svg" },
+  { name: "Astro", src: "/icons/astro.svg" },
+  { name: "Vue", src: "/icons/vue.svg" },
+
+  { name: "MySQL", src: "/icons/mysql.svg" },
 ];
 
 const UserIcon: React.FC<{ className?: string }> = ({ className = "" }) => (
@@ -66,25 +70,33 @@ const SobreMi: React.FC = () => {
 
               {/* Iconos de tecnologías (sin etiqueta) */}
               <div className="mt-3 flex flex-wrap items-center gap-2">
-                {techIcons.map((t) => (
-                  <div
-                    key={t.name}
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-md flex items-center justify-center"
-                    title={t.name}
-                  >
-                    <img
-                      src={t.src}
-                      alt={t.name}
-                      className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
-                      loading="lazy"
-                      onError={(e) => {
-                        const img = e.currentTarget as HTMLImageElement;
-                        img.onerror = null;
-                        img.src = fallbackSvg;
-                      }}
-                    />
-                  </div>
-                ))}
+                {techIcons.map((t) => {
+                  // clases específicas para fondo sutil por icono
+                  let wrapperClasses = "w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center";
+                  if (t.name === "Astro" || t.name === "MySQL") {
+                    // fondo blanco semitransparente y padding pequeño para que no destaque tanto
+                    wrapperClasses = "w-10 h-10 sm:w-12 sm:h-12 bg-white/70 p-0.5 rounded-sm ring-0 flex items-center justify-center";
+                  } else if (t.name === "Express") {
+                    // Express puede mantener un fondo un poco más visible
+                    wrapperClasses = "w-10 h-10 sm:w-12 sm:h-12 bg-white p-1 rounded-md flex items-center justify-center";
+                  }
+
+                  return (
+                    <div key={t.name} className={wrapperClasses} title={t.name}>
+                      <img
+                        src={t.src}
+                        alt={t.name}
+                        className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                        loading="lazy"
+                        onError={(e) => {
+                          const img = e.currentTarget as HTMLImageElement;
+                          img.onerror = null;
+                          img.src = fallbackSvg;
+                        }}
+                      />
+                    </div>
+                  );
+                })}
               </div>
 
               <p className="mt-3 text-sm text-slate-400">Actualmente buscando nuevas oportunidades.</p>
