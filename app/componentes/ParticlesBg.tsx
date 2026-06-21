@@ -23,11 +23,10 @@ const ParticlesBg: React.FC = () => {
   const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d", { alpha: true });
-    if (!ctx) return;
-
+    const canvasCurrent = canvasRef.current;
+    if (!canvasCurrent) return;
+    const canvasEl = canvasCurrent as HTMLCanvasElement;
+    const ctx = canvasEl.getContext("2d", { alpha: true })!;
     let w = Math.max(window.innerWidth, 1);
     let h = Math.max(window.innerHeight, 1);
     const dpr = window.devicePixelRatio || 1;
@@ -96,10 +95,10 @@ const ParticlesBg: React.FC = () => {
     function resize() {
       w = Math.max(window.innerWidth, 1);
       h = Math.max(window.innerHeight, 1);
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
-      canvas.style.width = `${w}px`;
-      canvas.style.height = `${h}px`;
+      canvasEl.width = Math.round(w * dpr);
+      canvasEl.height = Math.round(h * dpr);
+      canvasEl.style.width = `${w}px`;
+      canvasEl.style.height = `${h}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       initParticles();
     }
