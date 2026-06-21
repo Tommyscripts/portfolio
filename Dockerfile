@@ -1,12 +1,12 @@
 FROM node:22-alpine AS development-dependencies-env
 WORKDIR /app
 COPY . /app
-RUN corepack enable && pnpm install --frozen-lockfile
+RUN corepack enable && pnpm approve-builds --all || true && pnpm install --frozen-lockfile
 
 FROM node:22-alpine AS production-dependencies-env
 WORKDIR /app
 COPY ./package.json pnpm-lock.yaml /app/
-RUN corepack enable && pnpm install --frozen-lockfile --prod
+RUN corepack enable && pnpm approve-builds --all || true && pnpm install --frozen-lockfile --prod
 
 FROM node:22-alpine AS build-env
 WORKDIR /app
