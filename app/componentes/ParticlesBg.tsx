@@ -29,24 +29,35 @@ const ParticlesBg: React.FC = () => {
     let w = Math.max(window.innerWidth, 1);
     let h = Math.max(window.innerHeight, 1);
     const dpr = window.devicePixelRatio || 1;
+    let densityScale: number = 1;
 
     // removed noise canvas generation — keep background clean
 
     function initParticles() {
       const area = w * h;
-      const starCount = Math.min(1200, Math.max(350, Math.floor(area / 5000)));
-      const dustCount = Math.min(1400, Math.max(300, Math.floor(area / 2500)));
-      const bigCount = Math.min(40, Math.max(12, Math.floor(area / 60000)));
+      // escala de densidad según ancho para mejorar rendimiento en móviles
+      densityScale = w < 480 ? 0.35 : w < 768 ? 0.6 : w < 1024 ? 0.8 : 1.0;
+
+      const baseStarCount = Math.floor(area / 5000);
+      const starCount = Math.max(50, Math.min(1200, Math.round(baseStarCount * densityScale)));
+
+      const baseDustCount = Math.floor(area / 2500);
+      const dustCount = Math.max(40, Math.min(1400, Math.round(baseDustCount * densityScale)));
+
+      const baseBigCount = Math.floor(area / 60000);
+      const bigCount = Math.max(6, Math.min(40, Math.round(baseBigCount * densityScale)));
 
       const particles: Particle[] = [];
       for (let i = 0; i < starCount; i++) {
         const size = Math.random() * 2.6 + 0.3;
+        // reducir tamaño en pantallas pequeñas
+        const sizeScale = Math.max(0.6, densityScale);
         particles.push({
           x: Math.random() * w,
           y: Math.random() * h,
           vx: (Math.random() - 0.5) * 0.3,
           vy: (Math.random() - 0.5) * 0.3,
-          baseSize: size,
+          baseSize: size * sizeScale,
           baseAlpha: 0.15 + Math.random() * 0.9,
           twinkleFreq: 0.001 + Math.random() * 0.01,
           twinklePhase: Math.random() * Math.PI * 2,
@@ -64,7 +75,7 @@ const ParticlesBg: React.FC = () => {
       for (let i = 0; i < bigCount; i++) {
         const x = Math.random() * w;
         const y = Math.random() * h;
-        const size = 1.6 + Math.random() * 3.8;
+        const size = (1.2 + Math.random() * 3.0) * Math.max(0.8, densityScale);
         const color = mixColor(x, w);
         bigs.push({ x, y, vx: (Math.random() - 0.5) * 0.12, vy: (Math.random() - 0.5) * 0.12, size, color });
       }
@@ -154,7 +165,9 @@ const ParticlesBg: React.FC = () => {
 
         // colored glow
         ctx.globalCompositeOperation = "lighter";
-        const radius = p.baseSize * (3.5 + Math.random() * 3);
+        // reducir halos en pantallas pequeñas
+        const haloScale = Math.max(0.6, densityScale);
+        const radius = p.baseSize * (3.5 + Math.random() * 3) * haloScale;
         const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, radius);
         g.addColorStop(0, `rgba(${color.r},${color.g},${color.b},${Math.min(0.22, curAlpha * 0.6)})`);
         g.addColorStop(1, `rgba(${color.r},${color.g},${color.b},0)`);
@@ -181,7 +194,7 @@ const ParticlesBg: React.FC = () => {
         ctx.fill();
 
         // colored halo
-        const haloR = b.size * 10;
+        const haloR = Math.max(6, b.size * 10 * Math.max(0.6, densityScale));
         const hg = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, haloR);
         hg.addColorStop(0, `rgba(${b.color.r},${b.color.g},${b.color.b},0.3)`);
         hg.addColorStop(0.6, `rgba(${b.color.r},${b.color.g},${b.color.b},0.09)`);
@@ -202,10 +215,10 @@ const ParticlesBg: React.FC = () => {
 
       // subtle horizontal scanlines and glitch bands
       ctx.globalCompositeOperation = "source-over";
-      const scanCount = Math.min(80, Math.floor(h / 10));
+      const scanCount = Math.min(80, Math.max(6, Math.floor((h / 10) * densityScale)));
       for (let i = 0; i < scanCount; i += 6) {
         const y = i + (Math.sin(now * 0.0008 + i) * 2) + 6;
-        const lineAlpha = 0.006 + (Math.abs(Math.sin(now * 0.0003 + i)) * 0.01);
+        const lineAlpha = 0.006 + (Math.abs(Math.sin(now * 0.0003 + i)) * 0.01) * densityScale;
         ctx.fillStyle = `rgba(255,255,255,${lineAlpha})`;
         ctx.fillRect(0, y, w, 1);
       }

@@ -13,19 +13,19 @@ const Cabecera: React.FC<Props> = ({
   githubUrl = "https://github.com/Tommyscripts?tab=repositories",
   linkedInUrl = "https://www.linkedin.com/in/javierescoz/",
   name = "Javier Cabrera Escoz",
-  title = "Fuck stack Developer",
+  title = "Full stack Developer",
   subtitle = "",
   tagline = "No hago webs, Construyo experiencias y sueños",
 }) => {
   return (
     <header className="relative py-16 md:py-20">
       <div className="container mx-auto px-6 text-center relative z-20">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-rose-500">
             {name}
           </span>
         </h1>
-        <p className="mt-3 text-lg sm:text-xl text-slate-200">{title}</p>
+        <p className="mt-3 text-base sm:text-lg md:text-xl text-slate-200">{title}</p>
         <p className="mt-2 text-sm text-slate-300">{subtitle}</p>
 
         <div className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
