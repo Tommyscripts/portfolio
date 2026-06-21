@@ -42,16 +42,16 @@ const SobreMi: React.FC = () => {
   return (
     <section className="relative py-8">
       <div className="max-w-5xl mx-auto px-4">
-        {/* Título con líneas laterales pequeñas */}
-        <div className="flex items-center gap-3 mb-3">
-          <div className="w-8 sm:w-10 h-[2px] bg-cyan-400/90 rounded" />
-          <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-semibold">Sobre Mí</h2>
-          <div className="w-8 sm:w-10 h-[2px] bg-cyan-400/90 rounded" />
-        </div>
+        {/* Contenedor con borde sutil y título fuera del borde */}
+        <div className="relative mb-6">
+          <div className="absolute -top-6 sm:-top-8 left-6 z-20 flex items-center gap-3 bg-[#070608] px-3 sm:px-4">
+            <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
+            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-semibold px-2">Sobre Mí</h2>
+            <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
+          </div>
 
-        {/* Contenido sin fondo ni borde (transparente) */}
-        <div className="rounded-lg p-0">
-          <div className="p-4 sm:p-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
+          <div className="rounded-lg border border-white/10 bg-gradient-to-tr from-black/20 to-transparent backdrop-blur-sm overflow-hidden">
+            <div className="p-4 sm:p-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
             {/* Avatar (sin borde ni fondo) */}
             <div className="flex-shrink-0">
               <div className="w-28 sm:w-36 md:w-44 h-28 sm:h-36 md:h-44 rounded-sm flex items-center justify-center overflow-hidden">
@@ -103,6 +103,7 @@ const SobreMi: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
