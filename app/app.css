@@ -28,3 +28,13 @@ body {
     color-scheme: dark;
   }
 }
+
+/* Colorear las partículas blancas usando mix-blend-mode sobre un fondo degradado */
+#tsparticles {
+  background-clip: padding-box;
+}
+#tsparticles canvas,
+#tsparticles-red canvas {
+  mix-blend-mode: multiply;
+  -webkit-mix-blend-mode: multiply;
+}
