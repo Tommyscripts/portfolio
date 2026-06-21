@@ -47,7 +47,33 @@ const ParticlesBg: React.FC = () => {
           },
           background: { color: "transparent" },
         }}
-        style={{ position: "fixed", inset: 0, zIndex: -2 }}
+        style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none" }}
+      />
+      {/* Capa roja recortada a la mitad-derecha (tono rojizo en el centro-derecha) */}
+      <Particles
+        id="tsparticles-red"
+        options={{
+          fullScreen: { enable: false },
+          detectRetina: true,
+          fpsLimit: 60,
+          particles: {
+            number: { value: 120, density: { enable: true, width: 400, height: 400 } },
+            color: { value: "#ff4b4b" },
+            shape: { type: "circle" },
+            opacity: { value: { min: 0.35, max: 0.9 }, animation: { enable: true, speed: 0.3 } },
+            size: { value: { min: 0.8, max: 2.6 } },
+            move: { enable: true, speed: 0.18, random: true, outModes: { default: "out" } },
+          },
+          interactivity: { detectsOn: "canvas", events: { resize: true } },
+          background: { color: "transparent" },
+        }}
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 1,
+          pointerEvents: "none",
+          clipPath: "polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%)",
+        }}
       />
     </ParticlesProvider>
   );
