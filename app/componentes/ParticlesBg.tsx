@@ -19,7 +19,6 @@ const ParticlesBg: React.FC = () => {
   const particlesRef = useRef<Particle[]>([]);
   const dustRef = useRef<Dust[]>([]);
   const bigRef = useRef<BigStar[]>([]);
-  const noiseRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -31,22 +30,7 @@ const ParticlesBg: React.FC = () => {
     let h = Math.max(window.innerHeight, 1);
     const dpr = window.devicePixelRatio || 1;
 
-    function createNoiseCanvas(nw: number, nh: number) {
-      const nc = document.createElement("canvas");
-      nc.width = nw;
-      nc.height = nh;
-      const nctx = nc.getContext("2d")!;
-      const img = nctx.createImageData(nw, nh);
-      for (let i = 0; i < img.data.length; i += 4) {
-        const v = Math.floor(Math.random() * 255);
-        img.data[i] = v;
-        img.data[i + 1] = v;
-        img.data[i + 2] = v;
-        img.data[i + 3] = 255;
-      }
-      nctx.putImageData(img, 0, 0);
-      return nc;
-    }
+    // removed noise canvas generation — keep background clean
 
     function initParticles() {
       const area = w * h;
@@ -86,10 +70,7 @@ const ParticlesBg: React.FC = () => {
       }
       bigRef.current = bigs;
 
-      // noise canvas (small, scaled up)
-      const nw = Math.max(256, Math.floor(w / 3));
-      const nh = Math.max(256, Math.floor(h / 3));
-      noiseRef.current = createNoiseCanvas(nw, nh);
+      // no noise canvas — background kept clean
     }
 
     function resize() {
@@ -134,13 +115,7 @@ const ParticlesBg: React.FC = () => {
       lastTime = now;
       ctx.clearRect(0, 0, w, h);
 
-      // subtle base noise / film grain
-      if (noiseRef.current) {
-        ctx.save();
-        ctx.globalAlpha = 0.04;
-        ctx.drawImage(noiseRef.current, 0, 0, noiseRef.current.width, noiseRef.current.height, 0, 0, w, h);
-        ctx.restore();
-      }
+      // film grain removed — drawing stars on a clean background
 
       // dust (background specks)
       ctx.globalCompositeOperation = "source-over";
@@ -235,17 +210,7 @@ const ParticlesBg: React.FC = () => {
         ctx.fillRect(0, y, w, 1);
       }
 
-      // center seam highlight
-      ctx.globalCompositeOperation = "lighter";
-      const seamW = Math.max(2, Math.round(w * 0.006));
-      const seamG = ctx.createLinearGradient(w / 2 - seamW * 4, 0, w / 2 + seamW * 4, 0);
-      seamG.addColorStop(0, "rgba(102,204,255,0)");
-      seamG.addColorStop(0.45, "rgba(102,204,255,0.05)");
-      seamG.addColorStop(0.5, "rgba(255,255,255,0.12)");
-      seamG.addColorStop(0.55, "rgba(255,26,26,0.05)");
-      seamG.addColorStop(1, "rgba(255,26,26,0)");
-      ctx.fillStyle = seamG;
-      ctx.fillRect(w / 2 - seamW * 4, 0, seamW * 8, h);
+      // center seam removed
 
       // vignette
       ctx.globalCompositeOperation = "multiply";
