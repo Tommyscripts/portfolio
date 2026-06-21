@@ -101,15 +101,39 @@ const AstroIcon = () => (
   </svg>
 );
 
+// fallback SVG data URI (similar to SobreMi) en caso de error de carga
+const fallbackSvg =
+  'data:image/svg+xml;utf8,' +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#38bdf8" stroke-width="2"/></svg>'
+  );
+
+const IconImg: React.FC<{ src: string; name?: string; className?: string }> = ({ src, name = "", className = "" }) => (
+  <img
+    src={src}
+    alt={name}
+    className={`w-6 h-6 sm:w-7 sm:h-7 object-contain ${className}`}
+    loading="lazy"
+    onError={(e) => {
+      const img = e.currentTarget as HTMLImageElement;
+      img.onerror = null;
+      img.src = fallbackSvg;
+    }}
+  />
+);
+
 const defaultItems: StackItem[] = [
-  { id: 1, icon: <ReactIcon />, nombre: "React", nivel: "Avanzado", barradenivel: 9, zone: "blue" },
-  { id: 2, icon: <TsIcon />, nombre: "TypeScript", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
-  { id: 3, icon: <NodeIcon />, nombre: "Node.js", nivel: "Intermedio", barradenivel: 8, zone: "red" },
+  { id: 1, icon: <IconImg src="/icons/react.svg" name="React" />, nombre: "React", nivel: "Avanzado", barradenivel: 9, zone: "blue" },
+  { id: 2, icon: <IconImg src="/icons/typescript.svg" name="TypeScript" />, nombre: "TypeScript", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
+  { id: 3, icon: <IconImg src="/icons/nodejs.svg" name="Node.js" />, nombre: "Node.js", nivel: "Intermedio", barradenivel: 8, zone: "red" },
   { id: 4, icon: <NextIcon />, nombre: "Next.js", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
   { id: 5, icon: <GitIcon />, nombre: "Git & GitHub", nivel: "Experto", barradenivel: 8, zone: "red" },
-  { id: 6, icon: <JsIcon />, nombre: "JavaScript", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
-  { id: 7, icon: <TailwindIcon />, nombre: "Tailwind CSS", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
-  
+  { id: 6, icon: <IconImg src="/icons/javascript.svg" name="JavaScript" />, nombre: "JavaScript", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
+  { id: 7, icon: <IconImg src="/icons/tailwindcss.svg" name="Tailwind CSS" />, nombre: "Tailwind CSS", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
+  { id: 8, icon: <IconImg src="/icons/python.svg" name="Python" />, nombre: "Python", nivel: "Intermedio", barradenivel: 8, zone: "blue" },
+  { id: 9, icon: <IconImg src="/icons/vue.svg" name="Vue" />, nombre: "Vue", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
+  { id: 10, icon: <IconImg src="/icons/mysql.svg" name="MySQL" />, nombre: "MySQL", nivel: "Intermedio", barradenivel: 6, zone: "red" },
+  { id: 11, icon: <IconImg src="/icons/astro.svg" name="Astro" />, nombre: "Astro", nivel: "Intermedio", barradenivel: 6, zone: "blue" },
 ];
 
 function zoneFromLevel(level: number): Zone {
