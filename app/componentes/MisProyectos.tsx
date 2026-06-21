@@ -28,6 +28,14 @@ const defaultProjects: Project[] = [
     demoUrl: "https://discord.com/oauth2/authorize?client_id=1424779352008298537&scope=bot%20applications.commands&permissions=3941734153713728",
     githubUrl: "https://github.com/Tommyscripts/DiscordBotOceanicGo",
   },
+    {
+    id: "MyHomeList",
+    title: "My HomeList",
+    image: "../media/MyHomeList.png",
+    subtitle: "Este es un proyecto hecho con Vue y Vuetify, quise demostrar mis habilidades con dicho framework, El back esta subido en un lugar de manera gratuita, entonces si vas a intentar probar una demo puede ser un poco tedioso ya que hay que esperar a que el back se despierte, pero si quieres probarlo, clicka en Demo.",
+    demoUrl: "https://myhomelist.netlify.app/",
+    githubUrl: "https://github.com/Tommyscripts/frontendMylist"
+    },
 ];
 
 // Nota: cargamos imágenes desde `app/media` de forma asíncrona usando `import.meta.glob`
