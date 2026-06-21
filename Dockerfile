@@ -18,5 +18,5 @@ FROM node:22-alpine
 WORKDIR /app
 COPY ./package.json pnpm-lock.yaml /app/
 COPY --from=production-dependencies-env /app/node_modules /app/node_modules
-COPY --from=build-env /app/build /app/build
-CMD ["pnpm", "run", "start"]
+COPY --from=build-env /app/dist /app/dist
+CMD ["sh", "-c", "pnpm run preview --host 0.0.0.0 --port $PORT"]
