@@ -2,8 +2,7 @@
 .env
 /node_modules/
 
-# React Router
-/.react-router/
+# Build
 /build/
 
 # Ignorar archivo de notas internas sobre partículas
