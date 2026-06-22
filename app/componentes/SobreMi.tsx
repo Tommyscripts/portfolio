@@ -64,9 +64,10 @@ const SobreMi: React.FC = () => {
             {/* Contenido */}
             <div className="flex-1">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-white font-card">
-                Programador full stack <span className="font-normal italic font-body">obsesionado con el diseño oscuro</span>
+                Programador full stack <span className="font-normal italic font-body">amante del código y la tecnología</span>
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">el rendimiento y las experiencias que se sienten vivas.</p>
+              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">El rendimiento y las experiencias que se sienten vivas.</p>
+              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">Mejorar siempre es un objetivo constante.</p>
 
               {/* Iconos de tecnologías (sin etiqueta) */}
               <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -98,8 +99,6 @@ const SobreMi: React.FC = () => {
                   );
                 })}
               </div>
-
-              <p className="mt-3 text-sm text-slate-400 font-body">Actualmente buscando nuevas oportunidades.</p>
             </div>
           </div>
         </div>
