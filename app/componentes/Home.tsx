@@ -4,6 +4,7 @@ import Cabecera from "./Cabecera";
 import SobreMi from "./SobreMi";
 import MisStack from "./MisStack";
 import ComoTrabajo from "./ComoTrabajo";
+import TrabajemosJuntos from "./TrabajemosJuntos";
 import MisProyectos from "./MisProyectos";
 
 const Home: React.FC = () => {
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
           <MisStack />
           <MisProyectos />
           <ComoTrabajo />
+          <TrabajemosJuntos />
         </div>
       </main>
     </div>
