@@ -4,6 +4,7 @@
 
 # Build
 /build/
+/dist/
 
 # Ignorar archivo de notas internas sobre partículas
 readme2.md

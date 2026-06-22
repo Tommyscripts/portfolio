@@ -15,7 +15,7 @@ const Cabecera: React.FC<Props> = ({
   name = "Javier Cabrera Escoz",
   title = "Full stack Developer",
   subtitle = "",
-  tagline = "No hago webs, Construyo experiencias y sueños",
+  tagline = "No hago webs; construyo experiencias y sueños",
 }) => {
   return (
     <header className="relative py-16 md:py-20">

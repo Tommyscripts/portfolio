@@ -16,7 +16,7 @@ const defaultProjects: Project[] = [
     id: "ArrowHero",
     title: "Arrow Hero",
     image: "../media/ArrowHero.png",
-    subtitle: "En mis comienzos con JS vanilla, hice un juego para navegador totalmente vanilla, ArrowHero, un juego de habilidad y reflejos, donde el jugador debe esquivar flechas que caen del cielo. El juego tiene un sistema de puntuación y niveles de dificultad.",
+    subtitle: "En mis comienzos con JavaScript (vanilla) desarrollé ArrowHero, un juego de habilidad y reflejos en el que el jugador debe esquivar flechas que caen del cielo. Incluye un sistema de puntuación y varios niveles de dificultad.",
     demoUrl: "https://thriving-blini-b83168.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/ArrowHero",
   },
@@ -24,7 +24,7 @@ const defaultProjects: Project[] = [
     id: "DiscordBot",
     title: "Discord Bot",
     image: "../media/DiscordBot.png",
-    subtitle: "He creado un bot para Discord en codigo Python, con el tiempo he añadido varios juegos, sistema de moderación, google Translate, y muchas cosas más. Con el tiempo ire añadiendo más cosas que tengo en mente, y que se me ocurran. Nota: Al clickar en Demo, clickaras en el enlace para invitar al bot a tu servidor.",
+    subtitle: "He creado un bot para Discord en código Python. Con el tiempo añadí varios juegos, un sistema de moderación, integración con Google Translate y otras funcionalidades. Iré añadiendo mejoras próximamente. Nota: Al hacer clic en 'Demo' accederás al enlace para invitar al bot a tu servidor.",
     // sin demo para probar boton condicional
     demoUrl: "https://discord.com/oauth2/authorize?client_id=1424779352008298537&scope=bot%20applications.commands&permissions=3941734153713728",
     githubUrl: "https://github.com/Tommyscripts/DiscordBotOceanicGo",
@@ -33,7 +33,7 @@ const defaultProjects: Project[] = [
     id: "MyHomeList",
     title: "My HomeList",
     image: "../media/MyHomeList.png",
-    subtitle: "Este es un proyecto hecho con Vue y Vuetify, quise demostrar mis habilidades con dicho framework, El back esta subido en un lugar de manera gratuita, entonces si vas a intentar probar una demo puede ser un poco tedioso ya que hay que esperar a que el back se despierte, pero si quieres probarlo, clicka en Demo.",
+    subtitle: "Este proyecto está hecho con Vue y Vuetify para demostrar mis habilidades con ese framework. El backend está alojado en un servicio gratuito, por lo que la demo puede tardar en despertarse; si quieres probarla, haz clic en 'Demo'.",
     demoUrl: "https://myhomelist.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/frontendMylist"
     },

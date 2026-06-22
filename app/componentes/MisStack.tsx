@@ -221,7 +221,7 @@ const MisStack: React.FC<{ items?: StackItem[] }> = ({ items = defaultItems }) =
         <div className="relative mb-6">
                     <div className="absolute -top-6 sm:-top-8 left-6 z-20 flex items-center gap-3 bg-[#070608] px-3 sm:px-4">
                         <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
-                        <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-section px-2">Mí Stack</h2>
+                        <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-section px-2">Mi Stack</h2>
                         <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
                     </div>
             <div className="w-full flex flex-col gap-4">

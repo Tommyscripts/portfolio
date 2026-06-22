@@ -46,7 +46,7 @@ const SobreMi: React.FC = () => {
         <div className="relative mb-6">
           <div className="absolute -top-6 sm:-top-8 left-6 z-20 flex items-center gap-3 bg-[#070608] px-3 sm:px-4">
             <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
-            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-section px-2">Sobre Mí</h2>
+            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-section px-2">Sobre mí</h2>
             <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
           </div>
 
@@ -64,10 +64,10 @@ const SobreMi: React.FC = () => {
             {/* Contenido */}
             <div className="flex-1">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-white font-card">
-                Programador full stack <span className="font-normal italic font-body">amante del código y la tecnología</span>
+                Programador full stack, <span className="font-normal italic font-body">amante del código y la tecnología</span>
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">El rendimiento y las experiencias que se sienten vivas.</p>
-              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">Mejorar siempre es un objetivo constante.</p>
+              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">Busco rendimiento y experiencias que se sientan vivas.</p>
+              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">Mejorar siempre es mi objetivo.</p>
 
               {/* Iconos de tecnologías (sin etiqueta) */}
               <div className="mt-3 flex flex-wrap items-center gap-2">
