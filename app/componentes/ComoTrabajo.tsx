@@ -51,7 +51,7 @@ const ComoTrabajo: React.FC<{ items?: WorkItem[] }> = ({ items = defaultItems })
         <div className="relative mb-6">
           <div className="absolute -top-6 sm:-top-8 left-6 z-20 flex items-center gap-3 bg-[#070608] px-3 sm:px-4">
             <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
-            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-semibold px-2">Cómo Trabajo</h2>
+            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-section px-2">Cómo Trabajo</h2>
             <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
           </div>
 
@@ -62,8 +62,8 @@ const ComoTrabajo: React.FC<{ items?: WorkItem[] }> = ({ items = defaultItems })
                   <div key={it.id} className="p-1 rounded-lg">
                     <div className="h-full flex items-center gap-2 px-2 py-1">
                       <div className="w-6 h-6 flex items-center justify-center shrink-0">{it.icon}</div>
-                      <span className="text-slate-400 text-xs">-</span>
-                      <div className="text-slate-100 text-xs font-semibold">{it.texto}</div>
+                      <span className="text-slate-400 text-xs font-body">-</span>
+                      <div className="text-slate-100 text-xs font-body font-semibold">{it.texto}</div>
                     </div>
                   </div>
                 ))}

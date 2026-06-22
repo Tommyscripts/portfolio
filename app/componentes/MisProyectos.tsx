@@ -87,14 +87,14 @@ const MisProyectos: React.FC<{ items?: Project[] }> = ({ items = defaultProjects
         <div className="relative mb-6">
           <div className="absolute -top-6 left-6 z-20 flex items-center gap-3 bg-[#070608] px-3 sm:px-4">
             <div className="w-6 h-[2px] bg-cyan-400/90 rounded" />
-            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-semibold px-2">Mis Proyectos</h2>
+            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-section px-2">Mis Proyectos</h2>
             <div className="w-6 h-[2px] bg-cyan-400/90 rounded" />
           </div>
 
           <div className="rounded-lg border border-white/10 bg-gradient-to-tr from-black/20 to-transparent backdrop-blur-sm overflow-hidden p-6">
             {rows.map((row, ri) => (
               <div key={ri} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                {row.map((p) => (
+                        {row.map((p) => (
                   <article key={p.id} className="bg-slate-900/60 rounded-md border border-white/5 overflow-hidden shadow-sm">
                     <div className="aspect-[16/9] w-full bg-slate-800/30 flex items-center justify-center" style={{ background: p.image ? undefined : placeholderBg }}>
                       {(() => {
@@ -127,8 +127,8 @@ const MisProyectos: React.FC<{ items?: Project[] }> = ({ items = defaultProjects
 
                     <div className="p-4 flex flex-col gap-3">
                       <div>
-                        <h3 className="text-white font-semibold">{p.title}</h3>
-                        {p.subtitle && <p className="text-xs text-slate-300">{p.subtitle}</p>}
+                        <h3 className="text-white font-semibold font-card">{p.title}</h3>
+                        {p.subtitle && <p className="text-xs text-slate-300 font-body">{p.subtitle}</p>}
                       </div>
 
                       <div className="mt-2 flex gap-3">
@@ -137,7 +137,7 @@ const MisProyectos: React.FC<{ items?: Project[] }> = ({ items = defaultProjects
                             href={p.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500 text-black rounded-md text-sm font-semibold"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500 text-black rounded-md text-sm font-semibold font-button"
                           >
                             Demo
                           </a>
@@ -148,7 +148,7 @@ const MisProyectos: React.FC<{ items?: Project[] }> = ({ items = defaultProjects
                             href={p.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-2 border border-white/10 text-slate-200 rounded-md text-sm"
+                            className="inline-flex items-center gap-2 px-4 py-2 border border-white/10 text-slate-200 rounded-md text-sm font-button"
                           >
                             GitHub
                           </a>

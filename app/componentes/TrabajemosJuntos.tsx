@@ -5,8 +5,8 @@ const TrabajemosJuntos: React.FC = () => {
     <section className="py-10">
       <div className="max-w-6xl mx-auto px-4">
         <div className="rounded-lg bg-transparent backdrop-blur-sm p-8 flex flex-col items-center overflow-visible">
-          <p className="text-slate-200 italic text-center text-sm sm:text-base">
-            A veces el codigo no falla... <span className="font-semibold text-white">Solo espera a estar en producción</span>
+          <p className="text-slate-200 italic text-center text-sm sm:text-base font-body">
+            A veces el codigo no falla... <span className="font-semibold text-white font-body">Solo espera a estar en producción</span>
           </p>
 
           <div className="mt-6 flex flex-col items-center">
@@ -23,7 +23,7 @@ const TrabajemosJuntos: React.FC = () => {
                 <rect x="2" y="2" width="416" height="60" rx="10" fill="none" stroke="url(#grad-trabajemos)" strokeWidth="4" />
               </svg>
 
-              <span className="relative z-10 inline-block rounded-md px-16 py-4 bg-black/80 text-white font-semibold text-xl sm:text-2xl">
+              <span className="relative z-10 inline-block rounded-md px-16 py-4 bg-black/80 text-white font-semibold text-xl sm:text-2xl font-button">
                 Trabajemos juntos
               </span>
             </a>

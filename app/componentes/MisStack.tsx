@@ -219,11 +219,11 @@ const MisStack: React.FC<{ items?: StackItem[] }> = ({ items = defaultItems }) =
     return (
         <section className="my-10">
         <div className="relative mb-6">
-          <div className="absolute -top-6 sm:-top-8 left-6 z-20 flex items-center gap-3 bg-[#070608] px-3 sm:px-4">
-            <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
-            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-semibold px-2">Mí Stack</h2>
-            <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
-          </div>
+                    <div className="absolute -top-6 sm:-top-8 left-6 z-20 flex items-center gap-3 bg-[#070608] px-3 sm:px-4">
+                        <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
+                        <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-section px-2">Mí Stack</h2>
+                        <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
+                    </div>
             <div className="w-full flex flex-col gap-4">
                 {rows.map((row, rowIndex) => (
                     <div key={rowIndex} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
@@ -237,8 +237,8 @@ const MisStack: React.FC<{ items?: StackItem[] }> = ({ items = defaultItems }) =
                                         <div className="flex items-center gap-3">
                                             <div className="w-12 h-12 flex items-center justify-center rounded-md bg-black/30">{it.icon}</div>
                                             <div>
-                                                <div className="text-slate-100 font-semibold">{it.nombre}</div>
-                                                <div className="text-xs text-slate-300">{it.nivel}</div>
+                                                <div className="text-slate-100 font-semibold font-card">{it.nombre}</div>
+                                                <div className="text-xs text-slate-300 font-body">{it.nivel}</div>
                                             </div>
                                         </div>
 

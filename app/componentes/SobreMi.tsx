@@ -46,7 +46,7 @@ const SobreMi: React.FC = () => {
         <div className="relative mb-6">
           <div className="absolute -top-6 sm:-top-8 left-6 z-20 flex items-center gap-3 bg-[#070608] px-3 sm:px-4">
             <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
-            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-semibold px-2">Sobre Mí</h2>
+            <h2 className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-cyan-200 font-section px-2">Sobre Mí</h2>
             <div className="w-6 sm:w-8 h-[2px] bg-cyan-400/90 rounded" />
           </div>
 
@@ -63,10 +63,10 @@ const SobreMi: React.FC = () => {
 
             {/* Contenido */}
             <div className="flex-1">
-              <h3 className="text-base sm:text-lg md:text-xl font-bold text-white">
-                Programador full stack <span className="font-normal italic">obsesionado con el diseño oscuro</span>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-white font-card">
+                Programador full stack <span className="font-normal italic font-body">obsesionado con el diseño oscuro</span>
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-300">el rendimiento y las experiencias que se sienten vivas.</p>
+              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">el rendimiento y las experiencias que se sienten vivas.</p>
 
               {/* Iconos de tecnologías (sin etiqueta) */}
               <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -99,7 +99,7 @@ const SobreMi: React.FC = () => {
                 })}
               </div>
 
-              <p className="mt-3 text-sm text-slate-400">Actualmente buscando nuevas oportunidades.</p>
+              <p className="mt-3 text-sm text-slate-400 font-body">Actualmente buscando nuevas oportunidades.</p>
             </div>
           </div>
         </div>
