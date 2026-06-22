@@ -7,4 +7,4 @@
 /dist/
 
 # Ignorar archivo de notas internas sobre partículas
-readme2.md
+docs/particles.md
