@@ -123,14 +123,14 @@ const IconImg: React.FC<{ src: string; name?: string; className?: string }> = ({
 );
 
 const defaultItems: StackItem[] = [
-    { id: 1, icon: <IconImg src="/icons/react.svg" name="React" />, nombre: "React", nivel: "Avanzado", barradenivel: 9, zone: "blue" },
-    { id: 2, icon: <IconImg src="/icons/typescript.svg" name="TypeScript" />, nombre: "TypeScript", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
-    { id: 3, icon: <IconImg src="/icons/nodejs.svg" name="Node.js" />, nombre: "Node.js", nivel: "Intermedio", barradenivel: 8, zone: "red" },
-    { id: 4, icon: <NextIcon />, nombre: "Next.js", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
-    { id: 5, icon: <GitIcon />, nombre: "Git & GitHub", nivel: "Experto", barradenivel: 8, zone: "red" },
+    { id: 1, icon: <IconImg src="/icons/react.svg" name="React" />, nombre: "React", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
+    { id: 2, icon: <IconImg src="/icons/typescript.svg" name="TypeScript" />, nombre: "TypeScript", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
+    { id: 3, icon: <IconImg src="/icons/nodejs.svg" name="Node.js" />, nombre: "Node.js", nivel: "Intermedio", barradenivel: 7, zone: "red" },
+    { id: 4, icon: <NextIcon />, nombre: "Next.js", nivel: "Medio", barradenivel: 5, zone: "blue" },
+    { id: 5, icon: <GitIcon />, nombre: "Git & GitHub", nivel: "Avanzado", barradenivel: 8, zone: "red" },
     { id: 6, icon: <IconImg src="/icons/javascript.svg" name="JavaScript" />, nombre: "JavaScript", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
     { id: 7, icon: <IconImg src="/icons/tailwindcss.svg" name="Tailwind CSS" />, nombre: "Tailwind CSS", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
-    { id: 8, icon: <IconImg src="/icons/python.svg" name="Python" />, nombre: "Python", nivel: "Intermedio", barradenivel: 8, zone: "blue" },
+    { id: 8, icon: <IconImg src="/icons/python.svg" name="Python" />, nombre: "Python", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
     { id: 9, icon: <IconImg src="/icons/vue.svg" name="Vue" />, nombre: "Vue", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
     { id: 10, icon: <IconImg src="/icons/mysql.svg" name="MySQL" />, nombre: "MySQL", nivel: "Intermedio", barradenivel: 6, zone: "red" },
     { id: 11, icon: <IconImg src="/icons/astro.svg" name="Astro" />, nombre: "Astro", nivel: "Intermedio", barradenivel: 6, zone: "blue" },

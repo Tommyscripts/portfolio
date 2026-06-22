@@ -3,6 +3,7 @@ import ParticlesBg from "./ParticlesBg";
 import Cabecera from "./Cabecera";
 import SobreMi from "./SobreMi";
 import MisStack from "./MisStack";
+import ComoTrabajo from "./ComoTrabajo";
 import MisProyectos from "./MisProyectos";
 
 const Home: React.FC = () => {
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
           <SobreMi />
           <MisStack />
           <MisProyectos />
+          <ComoTrabajo />
         </div>
       </main>
     </div>
