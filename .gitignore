@@ -8,3 +8,32 @@
 
 # Ignorar archivo de notas internas sobre partículas
 docs/particles.md
+ 
+# IDEs and editors
+.vscode/
+.idea/
+
+# Environment files
+.env.local
+.env.*
+!.env.example
+
+# Lockfile for npm (using pnpm in this repo)
+package-lock.json
+
+# Logs
+*.log
+
+# Cache / temp
+.cache/
+.history/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Misc
+.pnp/
+.pnp.js
