@@ -1,4 +1,5 @@
 import React from "react";
+import yoImg from "../media/yo.png";
 
 const techIcons = [
   { name: "React", src: "/icons/react.svg" },
@@ -52,12 +53,20 @@ const SobreMi: React.FC = () => {
 
           <div className="rounded-lg border border-white/10 bg-gradient-to-tr from-black/20 to-transparent backdrop-blur-sm overflow-hidden">
             <div className="p-4 sm:p-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
-            {/* Avatar (sin borde ni fondo) */}
+            {/* Avatar (imagen de perfil `yo.png`) */}
             <div className="flex-shrink-0">
               <div className="w-28 sm:w-36 md:w-44 h-28 sm:h-36 md:h-44 rounded-sm flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center bg-transparent">
-                  <UserIcon className="w-20 sm:w-24 md:w-28 h-auto" />
-                </div>
+                <img
+                  src={yoImg}
+                  alt="Foto de perfil"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.onerror = null;
+                    img.src = fallbackSvg;
+                  }}
+                />
               </div>
             </div>
 
