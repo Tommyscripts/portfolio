@@ -69,6 +69,16 @@ const defaultProjects: Project[] = [
     demoUrl: "https://tuscitasveterinarias.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/ReactAdministradordepacientes",
   },
+  // Proyecto en preparación: descomentar cuando quieras publicarlo.
+  // {
+  //   id: "ExcelOnline",
+  //   title: "Excel Online",
+  //   image: "../media/Excel Online.png",
+  //   subtitle: "Aplicación web inspirada en Excel para gestionar hojas de cálculo, editar celdas y organizar información de forma rápida y clara. Este proyecto está pensado para trabajar con tablas, datos y automatizaciones de manera intuitiva, con un frontend moderno y un backend preparado para ampliar la lógica de negocio.",
+  //   demoUrl: "https://demo-por-definir.com/",
+  //   githubUrl: "https://github.com/Tommyscripts/ExcelProject",
+  //   // Backend: https://github.com/Tommyscripts/ExcelProjectBackEnd
+  // },
 ];
 
 // Nota: cargamos imágenes desde `app/media` de forma asíncrona usando `import.meta.glob`
