@@ -11,7 +11,6 @@ const techIcons = [
   { name: "PHP", src: "/icons/php.svg" },
   { name: "Astro", src: "/icons/astro.svg" },
   { name: "Vue", src: "/icons/vue.svg" },
-
   { name: "MySQL", src: "/icons/mysql.svg" },
 ];
 

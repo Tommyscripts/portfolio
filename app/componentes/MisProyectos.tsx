@@ -29,14 +29,46 @@ const defaultProjects: Project[] = [
     demoUrl: "https://discord.com/oauth2/authorize?client_id=1424779352008298537&scope=bot%20applications.commands&permissions=3941734153713728",
     githubUrl: "https://github.com/Tommyscripts/DiscordBotOceanicGo",
   },
-    {
+  {
     id: "MyHomeList",
     title: "My HomeList",
     image: "../media/MyHomeList.png",
     subtitle: "Este proyecto está hecho con Vue y Vuetify para demostrar mis habilidades con ese framework. El backend está alojado en un servicio gratuito, por lo que la demo puede tardar en despertarse; si quieres probarla, haz clic en 'Demo'.",
     demoUrl: "https://myhomelist.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/frontendMylist"
-    },
+  },
+  {
+    id: "AdministradorDeClientes",
+    title: "Administrador de clientes",
+    image: "../media/Administrador de clientes.png",
+    subtitle: "Aplicación web que simula la gestión de clientes de un negocio, permitiendo registrar, consultar y administrar información como nombres, números de teléfono y direcciones de correo electrónico. Utiliza LocalStorage para mantener los datos en el navegador sin backend ni base de datos externa.",
+    demoUrl: "https://administraclientesrouterdom.netlify.app/",
+    githubUrl: "https://github.com/Tommyscripts/AdministradorDeClientes",
+  },
+  {
+    id: "CotizadorDeCriptomonedas",
+    title: "Cotizador de monedas y criptomonedas",
+    image: "../media/Cotizador de criptos.png",
+    subtitle: "Aplicación web para consultar cotizaciones actuales de divisas y criptomonedas. Consume una API externa para obtener precios actualizados y muestra los datos de forma dinámica y sencilla.",
+    demoUrl: "https://contizadordecriptomonedas.netlify.app/",
+    githubUrl: "https://github.com/Tommyscripts/ContadorCriptomonedas",
+  },
+  {
+    id: "ControlDePresupuestos",
+    title: "Control de presupuestos",
+    image: "../media/Control de presupuestos.png",
+    subtitle: "Aplicación web para gestionar y controlar gastos mensuales. Permite registrar gastos, organizarlos por categorías y aplicar filtros para analizar mejor el uso del dinero. Los datos se almacenan en LocalStorage.",
+    demoUrl: "https://controlatuspresupuestos.netlify.app/",
+    githubUrl: "https://github.com/Tommyscripts/ControlDePresupuestos",
+  },
+  {
+    id: "TusCitasVeterinarias",
+    title: "Tus Citas Veterinarias",
+    image: "../media/Tus Citas Veterianarias.png",
+    subtitle: "Aplicación web para la gestión de citas y pacientes en una clínica veterinaria. Permite registrar y administrar información de mascotas y citas, con manejo de formularios, interfaz propia y persistencia de datos en LocalStorage.",
+    demoUrl: "https://tuscitasveterinarias.netlify.app/",
+    githubUrl: "https://github.com/Tommyscripts/ReactAdministradordepacientes",
+  },
 ];
 
 // Nota: cargamos imágenes desde `app/media` de forma asíncrona usando `import.meta.glob`
