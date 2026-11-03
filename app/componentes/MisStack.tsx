@@ -151,7 +151,7 @@ const MisStack: React.FC<{ items?: StackItem[] }> = ({ items = defaultItems }) =
         return chunks;
     };
 
-    const rows = chunkArray(list, 5);
+    const rows = chunkArray(list, 4);
 
     // refs para cada tarjeta, para calcular su posición en pantalla
     const refs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -226,7 +226,7 @@ const MisStack: React.FC<{ items?: StackItem[] }> = ({ items = defaultItems }) =
                     </div>
             <div className="w-full flex flex-col gap-4">
                 {rows.map((row, rowIndex) => (
-                    <div key={rowIndex} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                    <div key={rowIndex} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {row.map((it) => {
                             const computedSide = sideZones[String(it.id)];
                             const zoneResolved: Zone = computedSide ?? (it.zone === "auto" ? zoneFromLevel(it.barradenivel) : (it.zone ?? zoneFromLevel(it.barradenivel)));
