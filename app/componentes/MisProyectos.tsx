@@ -5,18 +5,40 @@ type Project = {
   title: string;
   subtitle?: string;
   image?: string;
+  tech?: string[];
   demoUrl?: string;
   githubUrl?: string;
 };
 
 const placeholderBg = "linear-gradient(135deg,#0b1220 0%, #0f1724 100%)";
 
+const techIconMap: Record<string, string> = {
+  react: "/icons/react.svg",
+  javascript: "/icons/javascript.svg",
+  "js": "/icons/javascript.svg",
+  typescript: "/icons/typescript.svg",
+  ts: "/icons/typescript.svg",
+  tailwind: "/icons/tailwindcss.svg",
+  tailwindcss: "/icons/tailwindcss.svg",
+  vue: "/icons/vue.svg",
+  vuejs: "/icons/vue.svg",
+  vuetify: "/icons/vue.svg",
+  node: "/icons/nodejs.svg",
+  nodejs: "/icons/nodejs.svg",
+  python: "/icons/python.svg",
+mysql: "/icons/mysql.svg",
+mongodb: "/icons/mongodb.svg",
+mongo: "/icons/mongodb.svg",
+html: "/icons/react.svg",
+css: "/icons/tailwindcss.svg",
+};
 const defaultProjects: Project[] = [
   {
     id: "ArrowHero",
     title: "Arrow Hero",
     image: "../media/ArrowHero.png",
     subtitle: "En mis comienzos con JavaScript (vanilla) desarrollé ArrowHero, un juego de habilidad y reflejos en el que el jugador debe esquivar flechas que caen del cielo. Incluye un sistema de puntuación y varios niveles de dificultad.",
+    tech: ["HTML", "CSS", "JavaScript"],
     demoUrl: "https://thriving-blini-b83168.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/ArrowHero",
   },
@@ -25,6 +47,7 @@ const defaultProjects: Project[] = [
     title: "Discord Bot",
     image: "../media/DiscordBot.png",
     subtitle: "He creado un bot para Discord en código Python. Con el tiempo añadí varios juegos, un sistema de moderación, integración con Google Translate y otras funcionalidades. Iré añadiendo mejoras próximamente. Nota: Al hacer clic en 'Demo' accederás al enlace para invitar al bot a tu servidor.",
+    tech: ["Python", "MySQL"],
     // sin demo para probar boton condicional
     demoUrl: "https://discord.com/oauth2/authorize?client_id=1424779352008298537&scope=bot%20applications.commands&permissions=3941734153713728",
     githubUrl: "https://github.com/Tommyscripts/DiscordBotOceanicGo",
@@ -34,6 +57,7 @@ const defaultProjects: Project[] = [
     title: "My HomeList",
     image: "../media/MyHomeList.png",
     subtitle: "Este proyecto está hecho con Vue y Vuetify para demostrar mis habilidades con ese framework. El backend está alojado en un servicio gratuito, por lo que la demo puede tardar en despertarse; si quieres probarla, haz clic en 'Demo'.",
+    tech: ["Vue", "Vuetify", "Node.js", "MongoDB"],
     demoUrl: "https://myhomelist.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/frontendMylist"
   },
@@ -42,6 +66,7 @@ const defaultProjects: Project[] = [
     title: "Administrador de clientes",
     image: "../media/Administrador de clientes.png",
     subtitle: "Aplicación web que simula la gestión de clientes de un negocio, permitiendo registrar, consultar y administrar información como nombres, números de teléfono y direcciones de correo electrónico. Utiliza LocalStorage para mantener los datos en el navegador sin backend ni base de datos externa.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://administraclientesrouterdom.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/AdministradorDeClientes",
   },
@@ -50,6 +75,7 @@ const defaultProjects: Project[] = [
     title: "Cotizador de monedas y criptomonedas",
     image: "../media/Cotizador de criptos.png",
     subtitle: "Aplicación web para consultar cotizaciones actuales de divisas y criptomonedas. Consume una API externa para obtener precios actualizados y muestra los datos de forma dinámica y sencilla.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://contizadordecriptomonedas.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/ContadorCriptomonedas",
   },
@@ -58,6 +84,7 @@ const defaultProjects: Project[] = [
     title: "Control de presupuestos",
     image: "../media/Control de presupuestos.png",
     subtitle: "Aplicación web para gestionar y controlar gastos mensuales. Permite registrar gastos, organizarlos por categorías y aplicar filtros para analizar mejor el uso del dinero. Los datos se almacenan en LocalStorage.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://controlatuspresupuestos.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/ControlDePresupuestos",
   },
@@ -66,6 +93,7 @@ const defaultProjects: Project[] = [
     title: "Tus Citas Veterinarias",
     image: "../media/Tus Citas Veterianarias.png",
     subtitle: "Aplicación web para la gestión de citas y pacientes en una clínica veterinaria. Permite registrar y administrar información de mascotas y citas, con manejo de formularios, interfaz propia y persistencia de datos en LocalStorage.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://tuscitasveterinarias.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/ReactAdministradordepacientes",
   },
@@ -172,6 +200,37 @@ const MisProyectos: React.FC<{ items?: Project[] }> = ({ items = defaultProjects
                         <h3 className="text-white font-semibold font-card">{p.title}</h3>
                         {p.subtitle && <p className="text-xs text-slate-300 font-body">{p.subtitle}</p>}
                       </div>
+
+                      {p.tech && p.tech.length > 0 && (
+                        <div className="flex flex-wrap gap-2">
+                          {p.tech.map((tech) => {
+                            const normalized = tech.toLowerCase().replace(/[^a-z0-9]+/g, "");
+                            const iconSrc = techIconMap[normalized] || techIconMap[tech.toLowerCase()] || "/icons/react.svg";
+                            const label = tech.trim();
+
+                            return (
+                              <div
+                                key={`${p.id}-${label}`}
+                                className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/30 bg-cyan-500/5 px-2 py-1 text-[10px] font-medium text-cyan-100"
+                                title={label}
+                              >
+                                <img
+                                  src={iconSrc}
+                                  alt={label}
+                                  className="h-3.5 w-3.5 object-contain"
+                                  loading="lazy"
+                                  onError={(e) => {
+                                    const img = e.currentTarget as HTMLImageElement;
+                                    img.onerror = null;
+                                    img.src = "/icons/react.svg";
+                                  }}
+                                />
+                                <span>{label}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
 
                       <div className="mt-2 flex gap-3">
                         {p.demoUrl && (

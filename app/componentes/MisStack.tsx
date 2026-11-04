@@ -133,7 +133,8 @@ const defaultItems: StackItem[] = [
     { id: 8, icon: <IconImg src="/icons/python.svg" name="Python" />, nombre: "Python", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
     { id: 9, icon: <IconImg src="/icons/vue.svg" name="Vue" />, nombre: "Vue", nivel: "Avanzado", barradenivel: 7, zone: "blue" },
     { id: 10, icon: <IconImg src="/icons/mysql.svg" name="MySQL" />, nombre: "MySQL", nivel: "Intermedio", barradenivel: 6, zone: "red" },
-    { id: 11, icon: <IconImg src="/icons/astro.svg" name="Astro" />, nombre: "Astro", nivel: "Intermedio", barradenivel: 6, zone: "blue" },
+    { id: 11, icon: <IconImg src="/icons/mongodb.svg" name="MongoDB" />, nombre: "MongoDB", nivel: "Avanzado", barradenivel: 8, zone: "blue" },
+    { id: 12, icon: <IconImg src="/icons/astro.svg" name="Astro" />, nombre: "Astro", nivel: "Intermedio", barradenivel: 6, zone: "blue" },
 ];
 
 function zoneFromLevel(level: number): Zone {

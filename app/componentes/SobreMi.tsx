@@ -12,6 +12,7 @@ const techIcons = [
   { name: "Astro", src: "/icons/astro.svg" },
   { name: "Vue", src: "/icons/vue.svg" },
   { name: "MySQL", src: "/icons/mysql.svg" },
+  { name: "MongoDB", src: "/icons/mongodb.svg" },
 ];
 
 const UserIcon: React.FC<{ className?: string }> = ({ className = "" }) => (
