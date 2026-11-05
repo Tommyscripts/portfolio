@@ -97,6 +97,15 @@ const defaultProjects: Project[] = [
     demoUrl: "https://tuscitasveterinarias.netlify.app/",
     githubUrl: "https://github.com/Tommyscripts/ReactAdministradordepacientes",
   },
+  {
+    id: "CocktailYRecetas",
+    title: "Cocktail y Recetas",
+    image: "../media/CocktailyRecetas.png",
+    subtitle: "Aplicación web construida con React, TypeScript y Tailwind CSS que consume la API de TheCocktailDB para descubrir bebidas y recetas de forma rápida, visual e intuitiva.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://beamish-dusk-70bb64.netlify.app/",
+    githubUrl: "https://github.com/Tommyscripts/BebidasYRecetas",
+  },
   // Proyecto en preparación: descomentar cuando quieras publicarlo.
   // {
   //   id: "ExcelOnline",
