@@ -73,10 +73,22 @@ const SobreMi: React.FC = () => {
             {/* Contenido */}
             <div className="flex-1">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-white font-card">
-                Programador full stack, <span className="font-normal italic font-body">amante del código y la tecnología</span>
+                Desarrollador web full stack, <span className="font-normal italic font-body">enfocado en crear soluciones útiles y eficientes</span>
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">Busco rendimiento y experiencias que se sientan vivas.</p>
-              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">Mejorar siempre es mi objetivo.</p>
+              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">
+                Tengo experiencia en desarrollo de aplicaciones y tecnologías web, con una forma de trabajar responsable,
+                organizada y resolutiva. Me adapto rápido, aprendo de forma continua y disfruto colaborando en equipo.
+              </p>
+              <p className="mt-2 text-sm sm:text-base text-slate-300 font-body">
+                Además, mis tres años de formación en Psicología me han ayudado a reforzar la comunicación, la empatía y la
+                comprensión de necesidades reales, aportando valor tanto en el trato con clientes como en el trabajo con
+                equipos. También he completado con éxito el programa Diginova de la FULP, consolidando mis competencias en
+                desarrollo web.
+              </p>
+              <p className="mt-2 text-sm sm:text-base text-cyan-200 font-body italic">
+                No vendo webs: creo experiencias digitales con alma, pensadas para conectar con las personas y hacer crecer
+                proyectos.
+              </p>
 
               {/* Iconos de tecnologías (sin etiqueta) */}
               <div className="mt-3 flex flex-wrap items-center gap-2">
